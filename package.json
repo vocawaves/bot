@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "discord.js": "^13.5.1",
+    "leekslazylogger": "^4.1.3"
+  }
+}
