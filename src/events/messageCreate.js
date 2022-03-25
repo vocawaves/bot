@@ -13,6 +13,9 @@ module.exports = async (client, msg) => {
     const args = msg.content.slice(prefix.length).trim().split(/ +/g);
     const name = args.shift();
     const command = client.commands.get(name) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(name));
+    if (!command) {
+        return;
+    }
 
     try {
         client.log.info('Attempting to run cmd ' + command.name + ' (ran by ' + msg.author.id + ')');
