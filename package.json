@@ -1,7 +1,29 @@
 {
+  "private": true,
+  "name": "bot",
+  "version": "1.0.0",
+  "author": "David Ralph",
+  "license": "MIT",
+  "main": "src/index.js",
+  "bugs": {
+    "url": "https://github.com/vocauk/bot/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vocauk/bot"
+  },
   "dependencies": {
-    "better-sqlite3-with-prebuilds": "^7.4.3",
+    "better-sqlite3-with-prebuilds": "7.4.3",
     "discord.js": "13.6.0",
-    "leekslazylogger": "4.1.7"
+    "leekslazylogger": "4.1.7",
+    "utf-8-validate": "5.0.9"
+  },
+  "optionalDependencies": {
+    "bufferutil": "4.0.6",
+    "utf-8-validate": "5.0.9"
+  },
+  "scripts": {
+    "start": "cd src && node index.js",
+    "setupdb": "cd src && node setupdatabase.js"
   }
 }

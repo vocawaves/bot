@@ -5,4 +5,4 @@ module.exports = {
     async execute(client, msg, _args) {
         msg.channel.send(`**${(client.ws.ping)}**ms`);
     }
-}
+};

@@ -1,5 +1,5 @@
 # bot
-Bot for Discord server
+Utility/fun bot for VOCA-UK Discord server
 
 ## Installation
 Please be aware due to the fact this bot was designed solely for the VOCA-UK Discord (and as such may be difficult to optimise for your own use case), we cannot provide any self-hosting support outside of
