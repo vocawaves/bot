@@ -8,7 +8,7 @@ developing features for the VOCA-UK instance of the bot.
 1. ``git clone https://github.com/vocauk/bot && cd bot``
 2. ``npm i`` (or ``yarn``)
 3. ``cd src && node setupdatabase.js``
-4. Move ``config-example.json`` to ``config.json`` and fill out
+4. Move ``src/config-example.json`` to ``src/config.json`` and fill out
 5. ``cd src && node index.js``
 
 ## License
