@@ -7,7 +7,8 @@ module.exports = {
   description: 'Gets VOCALOID image',
   async execute(_client, msg, args) {
     if (!allowed.includes(args[0])) {
-      return msg.channel.send(`Must be one of the following: ${JSON.stringify(allowed)}.`);
+      const list = allowed.map(x => `\`${x}\``).join(', ');
+      return msg.channel.send(`Must be one of the following: ${list}.`);
     }
 
     const img = await fetch('https://api.meek.moe/' + args[0])
@@ -15,7 +16,7 @@ module.exports = {
       .then(body => body.url);
 
     const embed = {
-      title: args[0],
+      title: args[0].charAt(0).toUpperCase() + args[0].slice(1),
       color: 2202550,
       image: {
         url: img
