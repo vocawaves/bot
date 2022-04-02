@@ -31,7 +31,7 @@ module.exports = {
             client.commands.set(commandName, require(`../${categoryName}/${commandName}.js`));
         } catch (e) {
             client.log.error(`Failed to load command ${commandName}`)
-            return msg.channel.send(`Failed to reload command **${commandName}**` + '```js\n' + e + '```.');
+            return msg.channel.send(`Failed to reload command **${commandName}**` + '```js\n' + e + '```');
         }
         client.log.warn(`Reloaded command ${commandName} (${categoryName})`);
         msg.channel.send(`Managed to (re)load command **${commandName}** from category **${categoryName}**.`);

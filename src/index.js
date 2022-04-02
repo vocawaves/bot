@@ -11,8 +11,7 @@ const client = new Client({
 
 client.log = new Logger();
 client.config = require('./config.json');
-client.db = require('better-sqlite3-with-prebuilds')('database.db');
-client.db.pragma('journal_mode = WAL');
+client.afk = new Collection();
 ['aliases', 'commands'].forEach((x) => (client[x] = new Collection()));
 
 const init = async () => {

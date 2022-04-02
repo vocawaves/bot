@@ -11,15 +11,12 @@ module.exports = {
       return msg.channel.send(`Must be one of the following: ${list}.`);
     }
 
-    const img = await fetch('https://api.meek.moe/' + args[0])
-      .then(res => res.json())
-      .then(body => body.url);
-
+    const img = await (await fetch('https://api.meek.moe/' + args[0])).json();
     const embed = {
       title: args[0].charAt(0).toUpperCase() + args[0].slice(1),
       color: 2202550,
       image: {
-        url: img
+        url: img.url
       },
       footer: {
         text: 'Image provided by api.meek.moe'

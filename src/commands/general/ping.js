@@ -3,6 +3,7 @@ module.exports = {
     category: 'General',
     description: 'Get the bot ping',
     async execute(client, msg, _args) {
-        msg.channel.send(`**${(client.ws.ping)}**ms`);
+        const m = await msg.channel.send(':ping_pong: Pinging...');
+        m.edit(`Latency: **${m.createdTimestamp - msg.createdTimestamp}**ms\nAPI Latency: **${Math.round(client.ws.ping)}**ms`);
     }
 };
