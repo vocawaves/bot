@@ -22,7 +22,6 @@
     "utf-8-validate": "5.0.9"
   },
   "scripts": {
-    "start": "cd src && node index.js",
-    "setupdb": "cd src && node setupdatabase.js"
+    "start": "cd src && node index.js"
   }
 }

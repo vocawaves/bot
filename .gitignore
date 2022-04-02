@@ -7,7 +7,4 @@ node_modules/
 # Files
 yarn.lock
 config.json
-database.db
-database.db-shm
-database.db-wal
 package-lock.json
