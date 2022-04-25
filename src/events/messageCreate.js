@@ -3,6 +3,14 @@ module.exports = async (client, msg) => {
         return;
     }
 
+    if (msg.mentions.users.size) {
+        const mention = msg.mentions.users.first();
+        if (mention && client.afk.has(mention.id)) {
+          const data = client.afk.get(mention.id);
+          msg.channel.send(`**${mention.tag}** is AFK: ${data.reason}`);
+        }
+    }
+
     const prefixMention = new RegExp(`^<@!?${client.user.id}> `);
     const prefix = msg.content.match(prefixMention) ? msg.content.match(prefixMention)[0] : client.config.prefix;
     if (msg.content.indexOf(prefix) !== 0) {
